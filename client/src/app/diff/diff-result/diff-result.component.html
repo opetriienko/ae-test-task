@@ -1,0 +1,11 @@
+<div class="row">
+  <table class="table table-hover table-bordered table-condensed table-striped text-center">
+    <tbody>
+    <tr *ngFor="let line of result; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{line.marker}}</td>
+      <td>{{line.text}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<form #diffForm="ngForm">
+  <div class="row">
+    <div class="col-xs-6">
+      <diff-fragment [(ngModel)]="original"
+                     [ngModelOptions]="{standalone: true}"
+                     [fragmentName]="originalFragment"
+                     ngDefaultControl>
+      </diff-fragment>
+    </div>
+
+    <div class="col-xs-6">
+      <diff-fragment [(ngModel)]="modified"
+                     [ngModelOptions]="{standalone: true}"
+                     [fragmentName]="modifiedFragment"
+                     ngDefaultControl>
+      </diff-fragment>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <button class="btn btn-default" (click)="compare()" [disabled]="isCompareDisabled">Compare</button>
+    </div>
+  </div>
+</form>
+
+<diff-result [result]="diffResult"></diff-result>
