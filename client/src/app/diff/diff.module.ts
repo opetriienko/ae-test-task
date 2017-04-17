@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { FileSelectDirective } from 'ng2-file-upload';
+
 import {
   DiffService,
   DiffFormComponent,
@@ -19,7 +21,8 @@ import {
   declarations: [
     DiffFormComponent,
     DiffFragmentComponent,
-    DiffResultComponent
+    DiffResultComponent,
+    FileSelectDirective
   ],
   providers: [DiffService]
 })
